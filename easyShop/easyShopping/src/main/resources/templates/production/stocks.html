@@ -1,0 +1,29 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:include="Fragments/header.html"></th:block>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            <th:block th:include="Fragments/topBar.html"></th:block>
+            <th:block th:include="Fragments/SideBar.html"></th:block>
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        Meenu Utama
+                        <small>utama menu</small>
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                        <li class="active">Here</li>
+                    </ol>
+                </section>
+                <section class="content container-fluid">
+                </section>
+            </div>
+            <th:block th:include="Fragments/footer.html"></th:block>
+        <script th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
+        <script th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/adminlte.min.js}"></script>
+    </body>
+</html>

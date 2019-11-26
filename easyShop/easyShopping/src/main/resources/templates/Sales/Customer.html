@@ -1,0 +1,68 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <th:block th:include="Fragments/header.html"></th:block>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini">
+        <div class="wrapper">
+            <th:block th:include="Fragments/topBar.html"></th:block>
+            <th:block th:include="Fragments/SideBar.html"></th:block>
+            <div class="content-wrapper">
+                <section class="content-header">
+                    <h1>
+                        Data Customer
+                        
+                    </h1>
+                    <ol class="breadcrumb">
+                        <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
+                        <li class="active">Here</li>
+                    </ol>
+                    <div th:if="${not #lists.isEmpty(customers)}">
+                <table class="table table-striped">
+                     <tr>
+                         <th scope="col">Id</th>
+                         <th scope="col">City</th>
+                         <th scope="col">Email</th>
+                         <th scope="col">First_name</th>
+                         <th scope="col">Last_name</th>
+                         <th scope="col">Phone</th>
+                         <th scope="col">State</th>
+                         <th scope="col">Street</th>
+                         <th scope="col">Zip_Code</th>
+                         <th scope="col">Action</th>
+                     </tr>
+                        <tr th:each="customer : ${customers}">
+                                <td th:text="${customer.id}"></td>
+                                <td th:text="${customer.city}"></td>
+                                <td th:text="${customer.email}"></td>
+                                <td th:text="${customer.first_name}"></td>
+                                <td th:text="${customer.last_name}"></td>
+                                <td th:text="${customer.phone}"></td>
+                                <td th:text="${customer.state}"></td>
+                                <td th:text="${customer.street}"></td>
+                                <td th:text="${customer.zip_code}"></td>
+                                <td>
+                                    <a th:href="${'/Sales/Customer/Edit/'+customer.id}"><span class="glyphicon glyphicon-edit"></span></a>
+                                    <a th:href="${'/Sales/Customer/Delete/'+customer.id}"><span class="glyphicon glyphicon-remove"></span></a>
+                                    
+                                </td>
+                        </tr>
+                </table>
+            </div>
+                    <div>
+                        <a class="btn btn-default" href="/Sales/Customer/Create">add new</a>
+                    </div>
+                    
+                </section>
+                <section class="content container-fluid">
+                </section>
+            </div>
+            
+            
+            
+            <th:block th:include="Fragments/footer.html"></th:block>
+        <script th:src="@{/bower_components/jquery/dist/jquery.min.js}"></script>
+        <script th:src="@{/bower_components/bootstrap/dist/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/adminlte.min.js}"></script>
+    </body>
+</html>

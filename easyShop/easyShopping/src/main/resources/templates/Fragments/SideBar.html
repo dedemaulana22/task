@@ -1,0 +1,46 @@
+<html>
+<aside class="main-sidebar">
+
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+
+      <!-- Sidebar Menu -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">SIDE BAR</li>
+        <!-- Optionally, you can add icons to the links -->
+        <li class="treeview">
+            <a href="#"><i class="fa fa-link"></i> <span>Sales</span>
+            <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                               </a>
+                            <ul class="treeview-menu">
+            <li><a th:href="@{/Sales/Customer}">Customer</a></li>
+            <li><a th:href="@{/Sales/orders}">Orders</a></li>
+            <li><a th:href="@{/Sales/order_item}">Order Items</a></li>
+            <li><a th:href="@{/Sales/staffs}">Staffs</a></li>
+            <li><a th:href="@{/Sales/stores}">Stores</a></li>
+          </ul>
+         </li>
+         
+         <li class="treeview">
+            <a href="#"><i class="fa fa-link"></i><span>Production</span>
+            <span class="pull-right-container">
+                                    <i class="fa fa-angle-left pull-right"></i>
+                                </span>
+                               </a>
+                            <ul class="treeview-menu">
+            <li><a th:href="@{/production/products}">Products</a></li>
+            <li><a th:href="@{/production/categories}">Categories</a></li>
+            <li><a th:href="@{/production/stocks}">Stocks</a></li>
+            <li><a th:href="@{/production/brands}">Brands</a></li>
+          </ul>
+         </li>
+        
+         
+       
+      <!-- /.sidebar-menu -->
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+</html>
