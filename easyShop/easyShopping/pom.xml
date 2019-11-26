@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>batm</groupId>
 	<artifactId>easyShopping</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>easyShopping</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -97,6 +97,7 @@
                     <groupId>mysql</groupId>
                     <artifactId>mysql-connector-java</artifactId>
                 </dependency>
+                
 	 
 	</dependencies>
 

@@ -48,9 +48,12 @@
                                 </td>
                         </tr>
                 </table>
+                        <spring:url value = "/download/?type=xls" var = "xlsURL" />
             </div>
                     <div>
                         <a class="btn btn-default" href="/Sales/Customer/Create">add new</a>
+                        
+                        <a href="${xlsURL }">Export Excel</a><br/>
                     </div>
                     
                 </section>

@@ -26,12 +26,12 @@ public class Customers {
     private String city;
     private String state;
     private String zip_code;
+
     
     @Version
     @Column(name = "optVersion", columnDefinition = "integer DEFAULT 0")
     private Integer version;
 
-    
     
     public Integer getVersion() {
         return version;
